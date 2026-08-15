@@ -1,0 +1,1 @@
+print("L'ambiente di lavoro è pronto")
