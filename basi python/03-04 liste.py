@@ -22,5 +22,18 @@ for mago in maghi:
 for value in range(1,6):#range(start,stop,step), numeri da 1 a 5
     print(value)
 numero=list(range(1,6))#crea una lista con numeri da 1 a 5
-numero=list(range(1,6,2))#crea una lista con numeri da 1 a 5 con step di 2
+numero2=list(range(1,6,2))#crea una lista con numeri da 1 a 5 con step di 2
 print(numero)
+print(numero2)
+quadrati=[value**2 for value in range(1,6)]#crea una lista con i quadrati dei numeri da 1 a 5
+print(quadrati)
+print(quadrati[0:3])#stampa i primi 3 elementi della lista
+for quadrato in quadrati[:3]:#stampa i primi 3 elementi della lista
+    print(quadrato)
+
+cibo=["pizza","pasta","gelato"]
+cibo_amico=cibo[:]#copia della lista cibo, senza il simbolo [:] cibo_amico sarebbe un riferimento alla lista cibo e non una copia
+#NON cibo=cibo_amico, perché così cibo_amico sarebbe un riferimento alla lista cibo e non una copia
+
+dimensioni=(200,50)#tuple, non modificabile
+dimensioni=(400,100)#modifica la variabile dimensioni, ma non la tuple originale
