@@ -40,3 +40,21 @@ SELECT
     SUM(quantita) AS quote_totali
 FROM transazioni
 GROUP BY simbolo;
+
+SELECT 
+    u.username,
+    u.email,
+    t.simbolo,
+    t.quantita,
+    t.prezzo_acquisto,
+    (t.quantita * t.prezzo_acquisto) AS valore_totale
+FROM transazioni t
+JOIN utenti u ON t.utente_id = u.id;
+
+SELECT 
+    u.username,
+    COUNT(t.id) AS numero_operazioni,
+    SUM(t.quantita * t.prezzo_acquisto) AS valore_portafoglio
+FROM utenti u
+JOIN transazioni t ON u.id = t.utente_id
+GROUP BY u.id;
