@@ -1,60 +1,46 @@
-# 🚀 Percorso di Preparazione: Progetto Full-Stack & Trento
+# 🚀 Percorso di Preparazione: Full-Stack FinTech & Trento
 
 ## 📌 Checklist Materiali & Strumenti
-- [x] **VS Code** (con estensioni Python, Pylance, Python Debugger, Python Environments, SQLite Viewer)
-- [x] **Git & GitHub** (Repository `Progetto-Trento` configurata e sincronizzata)
-- [ ] **Libro:** *Python Crash Course* (3ª Edizione) di Eric Matthes
-- [ ] **SQLBolt.com** (per ripassare SQL in 2-3 serate)
-- [ ] **The Odin Project** (sezione *Foundations* per HTML/JS)
+- [x] **VS Code** (con estensioni Python, SQLite Viewer, Git)
+- [x] **Git & GitHub** (Repository `Progetto-Trento`)
+- [ ] **Libro:** *Python Crash Course* (3ª Edizione) - Parte 1
+- [ ] **Corso SQL:** SQLBolt + Teoria Relazionale e DDL/DML completa
+- [ ] **Corso Web Development:** HTML5, CSS3 avanzato (Flexbox/Grid) e JavaScript moderno (ES6+)
 
 ---
 
-## 🗺️ Roadmap Operativa in 5 Fasi
+## 🗺️ Roadmap Operativa Completa
 
-### Fase 0: Setup dell'Ambiente (COMPLETATA ✅)
-- Installato Python 3 e VS Code.
-- Inizializzata repository locale Git e collegata a GitHub.
-- Eseguito con successo il primo push.
+### Fase 1: Fondamenta di Python & OOP (IN CORSO ⏳)
+- **Fonte:** *Python Crash Course* (Capitoli 1–9)
+- **Contenuti:** Variabili, strutture dati, cicli, funzioni, gestione errori e **Classi / OOP** (Capitolo 9).
+- **Obiettivo Pratico:** Creare una classe `Portafoglio` da riga di comando per gestire titoli e transazioni.
 
-### Fase 1: Basi Solide e OOP in Python (Settimane 1 - 4)
-- **Fonte:** *Python Crash Course* — Parte 1 (Capitoli 1–9)
-- **Argomenti:** Variabili, liste, cicli, dizionari, funzioni e Classi (OOP).
-- **Obiettivo Pratico:** Script Python da riga di comando per la gestione di spese/note.
+### Fase 2: Database & SQL Avanzato
+- **Fonte:** *SQLBolt* + esercitazioni su SQLite
+- **Contenuti:** Teoria dei database relazionali, Progettazione Schemi, Primary/Foreign Key, JOIN, Aggregazioni, Normalizzazione e Modulo `sqlite3` in Python.
+- **Obiettivo Pratico:** Progettare e interrogare il DB relazionale `finanza.db` (Tabelle: `utenti`, `transazioni`, `asset`).
 
-### Fase 2: Salvataggio Dati con SQL (Settimane 5 - 7)
-- **Fonte:** *SQLBolt.com* + modulo `sqlite3` in Python
-- **Argomenti:** Tabelle, query `INSERT`, `SELECT`, `UPDATE`, `DELETE`.
-- **Obiettivo Pratico:** Salvare permanentemente i dati dello script su database SQLite.
+### Fase 3: Front-End Development (HTML5, CSS3, JavaScript ES6)
+- **Fonte:** *The Odin Project* / MDN Web Docs
+- **Contenuti:** 
+  - **HTML5:** Semantica web, form, input validati.
+  - **CSS3:** Box model, Layout moderni (Flexbox e CSS Grid), Responsive Design.
+  - **JavaScript:** Sintassi base, Manipolazione del DOM, Eventi, Programmazione Asincrona (`fetch`/API), e integrazione della libreria **Chart.js** per i grafici.
+- **Obiettivo Pratico:** Costruire la dashboard finanziaria con tabelle dinamiche e grafici interattivi.
 
-### Fase 3: Interfaccia Web con HTML e JS (Settimane 8 - 11)
-- **Fonte:** *The Odin Project* (Foundations)
-- **Argomenti:** Struttura form HTML, manipolazione DOM con JavaScript.
-- **Obiettivo Pratico:** Creare l'interfaccia grafica web del progetto.
+### Fase 4: Back-End, API Integration & Web Framework (Flask)
+- **Fonte:** Documentazione Flask / Tutorial Architetture Web
+- **Contenuti:** Architettura Client-Server, Protocollo HTTP (GET/POST/PUT/DELETE), Routing in Flask, Template Engine (Jinja2), consumo di API esterne (libreria `yfinance` e `requests`).
+- **Obiettivo Pratico:** Integrare Front-End, Back-End e Database per scaricare i prezzi azionari in tempo reale, calcolare il rendimento e mostrare i grafici.
 
-### Fase 4: Unione Totale con Flask (Settimane 12 - 16)
-- **Fonte:** *Python Crash Course* — Parte 2 / Documentazione Flask
-- **Argomenti:** Server web Python, gestione route e comunicazioni API.
-- **Obiettivo Pratico:** Collegare la web app al database (App Full-Stack pronta).
-
-### Fase 5: Pubblicazione e Preparazione Università
-- Pulisci codice, scrivi un `README.md` dettagliato e completa il portfolio su GitHub.
+### Fase 5: Refactoring, Security & Testing
+- **Contenuti:** Gestione delle variabili d'ambiente, sicurezza delle API key, pulizia del codice (PEP 8) e scrittura del file `README.md` per il portfolio GitHub.
 
 ---
 
-## 🛠️ Comandi Git Fondamentali (Routine a fine sessione)
+## 🛠️ Comandi Git per la fine di ogni sessione
 
-Ogni volta che finisci una sessione di lavoro, esegui questi 3 comandi nel terminale di VS Code:
-
-1. `git add .` *(seleziona tutte le modifiche)*
-2. `git commit -m "Descrizione di cosa hai fatto"` *(crea il punto di salvataggio)*
-3. `git push` *(invia tutto su GitHub online)*
-
----
-
-## 📂 Struttura Cartelle del Progetto
-```text
-Progetto-Trento/
-├── 01_basi_python/
-│   ├── 01_variabili.py
-│   └── 02_liste_e_cicli.py (prossimo step)
-└── NOTE_PERCORSO.md
+1. `git add .`
+2. `git commit -m "Messaggio descrittivo"`
+3. `git push`
