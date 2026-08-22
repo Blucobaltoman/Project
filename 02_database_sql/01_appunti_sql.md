@@ -79,3 +79,9 @@ AVG(),Media aritmetica dei valori,AVG(prezzo_acquisto)
 COUNT(),Conta il numero di righe,COUNT(*) o COUNT(id)
 MAX(),Trova il valore massimo,MAX(prezzo_acquisto)
 MIN(),Trova il valore minimo,MIN(prezzo_acquisto)
+
+La INNER JOIN prende solo le righe che hanno una corrispondenza in entrambe le tabelle (ovvero dove la Foreign Key transazioni.utente_id coincide con la Primary Key utenti.id).
+
+SELECT utenti.username, transazioni.simbolo, transazioni.quantita
+FROM transazioni
+JOIN utenti ON transazioni.utente_id = utenti.id;
