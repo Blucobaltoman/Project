@@ -27,6 +27,6 @@ INSERT INTO transazioni (utente_id, simbolo, quantita, prezzo_acquisto)
 VALUES
     (1, 'AAPL', 10, 150.00),
     (1, 'GOOGL', 5, 2800.00),
-    (2, 'TSLA', 3, 700.00);
+    (2, 'TSLA', 3, 700.00),
     (2, 'TSLA', 3, 700.00);
 
