@@ -85,3 +85,19 @@ La INNER JOIN prende solo le righe che hanno una corrispondenza in entrambe le t
 SELECT utenti.username, transazioni.simbolo, transazioni.quantita
 FROM transazioni
 JOIN utenti ON transazioni.utente_id = utenti.id;
+
+
+
+
+
+ESECUZIONE SCRIPT
+Fase Logica,Comando Usato,A Cosa Serve
+1. Trovare i file,os.path.abspath(__file__) + dirname,Trova la cartella dove vive lo script Python su qualunque computer
+,os.path.join(),Unisce cartella e nome file mettendo le barre giuste (/ o \)
+2. Connettere/Creare,sqlite3.connect(DB_PATH),Apre il file del database (o lo crea da zero se non esiste)
+,conn.cursor(),"Inizializza l'oggetto ""esecutore"" che invierà le istruzioni SQL"
+3. Inviare comandi,cursor.executescript(),Esegue più istruzioni SQL insieme (es. un intero file di script .sql)
+,cursor.execute(),Esegue una singola istruzione SQL (es. una sola query SELECT)
+4. Salvare/Raccogliere,conn.commit(),Salva fisicamente e in modo permanente le modifiche sul disco
+,cursor.fetchall(),Scarica tutti i dati restituiti dalla SELECT trasformandoli in una lista Python
+5. Liberare memoria,conn.close(),Chiude la connessione con il file per evitare di occupare risorse

@@ -55,9 +55,19 @@ def leggi_report_portafoglio():
 
     conn.close()
 
+def aggiungi_nuovo_utente_e_transazione(username, email, simbolo, quantita, prezzo_acquisto):
+    conn=sqlite3.connect(DB_PATH)
+    cursor=conn.cursor()
+    cursor.execute("INSERT INTO utenti (username, email) VALUES (?, ?)", (username, email))
+    nuovo_id=cursor.lastrowid #ottiene l'id dell'ultimo record inserito
+    cursor.execute("INSERT INTO transazioni (utente_id, simbolo, quantita, prezzo_acquisto) VALUES (?, ?, ?, ?)", (nuovo_id, simbolo, quantita, prezzo_acquisto))
+    conn.commit()
+    conn.close()
+
 #convenzione: se il file viene eseguito direttamente, esegue il codice sotto, altrimenti no (utile per importare funzioni senza eseguire tutto)
 
 # --- ESECUZIONE MAIN ---
 if __name__ == "__main__":
     inizializza_db()
+    aggiungi_nuovo_utente_e_transazione("luca_m", "luca.m@example.com", "MSFT", 10.0, 400.00)
     leggi_report_portafoglio()
