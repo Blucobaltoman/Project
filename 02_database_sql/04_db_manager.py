@@ -13,7 +13,7 @@ SQL_SCRIPT_PATH = os.path.join(BASE_DIR, "02_creazione_tabelle.sql")
 def inizializza_db():
     """Legge lo script SQL ed esegue la creazione/popolamento delle tabelle."""
     conn = sqlite3.connect(DB_PATH)#canale di connessione al database, se non esiste lo crea
-    cursor = conn.cursor()#esecutor per eseguire comandi SQL
+    cursor = conn.cursor() #esecutor per eseguire comandi SQL
 
     # Leggiamo il contenuto del file .sql creato ieri
     with open(SQL_SCRIPT_PATH, "r", encoding="utf-8") as file: #apre il file in modalita reading, encoding UTF-8 per evitare problemi di caratteri speciali
