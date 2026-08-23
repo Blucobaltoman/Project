@@ -4,8 +4,9 @@ DROP TABLE IF EXISTS utenti;
 CREATE TABLE utenti (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL UNIQUE,
-    email TEXT NOT NULL UNIQUE
-)
+    email TEXT NOT NULL UNIQUE,
+    dataregistrazione DATE DEFAULT CURRENT_DATE
+);
 
 CREATE TABLE transazioni(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -13,8 +14,9 @@ CREATE TABLE transazioni(
     simbolo TEXT NOT NULL,
     quantita REAL NOT NULL,
     prezzo_acquisto REAL NOT NULL CHECK(prezzo_acquisto > 0),
+    data_operazione DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (utente_id) REFERENCES utenti(id)
-)
+);
 
 INSERT INTO utenti (username, email) 
 VALUES
