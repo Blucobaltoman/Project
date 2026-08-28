@@ -24,3 +24,10 @@ df["col"].max() / .min(): Trova il valore massimo o minimo.
 df.groupby("gruppo")["valore"].sum(): Raggruppa le righe per una colonna e ne somma un'altra (l'equivalente del GROUP BY in SQL).
 
 df["nuova_col"] = df["col1"] / df["col2"]: Crea una nuova colonna calcolata al volo su tutte le righe contemporaneamente (senza usare cicli for).
+
+Comando,A cosa serve
+"df[""col""].unique()",Estrae i valori unici di una colonna eliminando i duplicati.
+.tolist(),Converte un oggetto Pandas/NumPy in una classica lista Python.
+yf.download(),Scarica dati di mercato live per una lista di titoli in un'unica chiamata.
+.iloc[-1],Prende l'ultimo valore disponibile in una serie di dati.
+"df[""col""].map(dizionario)",Sostituisce/associa i valori di una colonna usando un dizionario come mappa. 

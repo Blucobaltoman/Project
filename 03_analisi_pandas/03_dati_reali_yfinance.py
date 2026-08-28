@@ -11,7 +11,6 @@ DB_PATH = os.path.join(PROJECT_ROOT, "02_database_sql", "finanza.db")
 
 def scarica_prezzi_correnti(ticker_list):
     """Scarica i prezzi correnti per tutti i ticker in una sola chiamata di rete."""
-    print("⏳ Scaricamento prezzi live da Yahoo Finance in corso...")
 
     # yf.download scarica tutti i dati in un unico blocco (molto più rapido e affidabile)
     dati = yf.download(
