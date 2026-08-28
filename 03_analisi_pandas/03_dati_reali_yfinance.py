@@ -30,7 +30,7 @@ def calcola_performance_portafoglio():
     df=pd.read_sql_query(query,conn)
     conn.close()
 
-    ticker_unici=df["simbolo"].unique.tolist()
+    ticker_unici=df["simbolo"].unique().tolist()
     mappa_prezzi=scarica_prezzi_correnti(ticker_unici)
     df["prezzo_corrente"]=df["simbolo"].map(mappa_prezzi)
 
