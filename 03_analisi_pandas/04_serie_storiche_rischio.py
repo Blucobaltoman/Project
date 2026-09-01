@@ -21,7 +21,7 @@ def scarica_storico_prezzi(ticker_list, period="1y"):
     return dati
 
 def analizza_rischio_rendimento(prezzi_storici):
-    rendimenti_giornalieri=prezzi_storici.pct_change().dropna()
+    rendimenti_giornalieri=prezzi_storici.pct_change().dropna()#scarta valori nulli
     volatilita_giornalier=rendimenti_giornalieri.std()
     volatilita_annua=volatilita_giornalier * np.sqrt(252)*100
     rendimento_totale=((prezzi_storici.iloc[-1] - prezzi_storici.iloc[0]) / prezzi_storici.iloc[0]) * 100
